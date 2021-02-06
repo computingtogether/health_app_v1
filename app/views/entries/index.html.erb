@@ -2,27 +2,27 @@
 
 <h1>Entries</h1>
 
-<table>
+<table class="entries__table">
   <thead>
     <tr>
-      <th>Foods</th>
-      <th>Activities</th>
-      <th>Feelings</th>
-      <th>Pains</th>
-      <th colspan="3"></th>
+      <th class="entries___time">Created</th>
+      <th class="entries___foods">Foods</th>
+      <th class="entries___activities">Activities</th>
+      <th class="entries___feelings">Feelings</th>
+      <th class="entries___pains">Pains</th>
+      <th colspan="1"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @entries.each do |entry| %>
       <tr>
+        <td><%= link_to time_ago_in_words(entry.created_at), entry %></td>
         <td><%= entry.foods %></td>
         <td><%= entry.activities %></td>
         <td><%= entry.feelings %></td>
         <td><%= entry.pains %></td>
-        <td><%= link_to 'Show', entry %></td>
-        <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
-        <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td ><%= link_to 'Delete', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
