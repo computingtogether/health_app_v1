@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  foods: MyString
+  activities: MyString
+  feelings: MyString
+  pains: MyString
+
+two:
+  foods: MyString
+  activities: MyString
+  feelings: MyString
+  pains: MyString
