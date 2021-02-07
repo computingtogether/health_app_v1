@@ -31,3 +31,16 @@
 <br>
 
 <%= link_to 'New Entry', new_entry_path %>
+
+<br><br>
+
+<%# How can I access @entries in my home folder?  %>
+
+<table>
+  <% create_sorted_foods_tally.each_pair do |k,v| %>
+    <tr>
+      <td><%= v %></td>
+      <td><%= k %></td>
+    </tr>
+  <% end %>
+</table>
